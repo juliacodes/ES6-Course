@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>let and const</title>
+    </head>
+    <body>
+        <script>
+            // 🖋 Lesson Notes
+
+            // var is scoped to functions but not to any block
+            // var can be redefined anywhere in the project without error
+
+            // let is scoped to any block (if statement, function, etc)
+            // let can be redefined just like var
+
+            // const can not be redefined ever
+
+            function setWidth() {
+                var width = 100;
+                console.log(width);
+            }
+            setWidth();
+
+            var age = 100;
+            if (age > 12) {
+                var dogYears = age * 7;
+                console.log(`You are ${dogYears} dog years old!`);
+            }
+
+            console.log(width);
+            let height = 200;
+            const key = 'abc123';
+        </script>
+    </body>
+</html>
