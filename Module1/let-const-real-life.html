@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>let and const real world</title>
+    </head>
+    <body>
+        <script>
+            // 🖋 Lesson Notes
+
+            // IIFE - function that runs itself immediately - can't leak into the global scope
+            (function() {
+                var name = 'wes'; // can't leak - but is accessible
+            });
+
+            // let and const don't need IIFE
+            const name = 'wes';
+
+            for (var i = 0; i < 10; i++) {
+                // var will leak
+                console.log(i);
+                setTimeout(function() {
+                    console.log('The number is ' + i);
+                }, 1000);
+            }
+
+            for (var i = 0; i < 10; i++) {
+                // let wont leak
+                console.log(i);
+                setTimeout(function() {
+                    console.log('The number is ' + i);
+                }, 1000);
+            } // will update every second and work in time
+        </script>
+    </body>
+</html>
