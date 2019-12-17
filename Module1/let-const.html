@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>let and const</title>
+    </head>
+    <body>
+        <script>
+            // 🖋 Lesson Notes
+            // 👎 can't redefine let (let status = hello ; let status = goodbye)
+            // 👍 you can update the variable (let status = hello;  status = hello)
+
+            const key = 'abc123';
+            let points = 50;
+            let winner = false;
+
+            if (points > 40) {
+                let winner = true; // winner are two separate variables because it was declared twice
+            }
+
+            points = 60;
+            key = 'abc1234'; // can't update const
+
+            const person = {
+                // person is constant, but the elements within it are not
+                name: 'Julia',
+                age: 28
+            };
+
+            const wes = Object.freeze(person);
+        </script>
+    </body>
+</html>
