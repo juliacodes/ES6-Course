@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Arrow Functions</title>
+    </head>
+    <body>
+        <script>
+            const names = ['wes', 'kait', 'lux'];
+
+            const fullNames = names.map(function(name) {
+                // old version
+                return `${name} bos`;
+            });
+
+            const fullNames2 = names.map(name => {
+                // single parameter
+                // es6+
+                return `${name} bos`;
+            });
+
+            const fullNames2 = names.map((index, name) => {
+                // multiple parameters
+                // es6+
+                return `${name} bos`;
+            });
+
+            const fullNames2 = names.map(name => `${name} bos`); // implicitly return
+            const fullNames2 = names.map(() => `any name bos`); // implicitly return without parameter
+
+            function sayMyName(name) {
+                // old way of declaring functions
+                alert(`Hello ${name}`);
+            }
+
+            const sayMyName = name => {
+                // anonymous function es6
+                alert(`Hello ${name}`);
+            };
+        </script>
+    </body>
+</html>
