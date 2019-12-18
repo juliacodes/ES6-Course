@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Template Strings!</title>
+    </head>
+    <body>
+        <script>
+            const dogs = [
+                { name: 'snickers', age: 2 },
+                { name: 'huge', age: 9 },
+                { name: 'sunny', age: 1 }
+            ];
+
+            const markup = `
+                <ul class="dogs">
+                    ${dogs
+                        .map(dog => `<li>${dog.name} is ${dog.age * 7}</li>`)
+                        .join('')}
+                </ul>
+            `;
+            document.body.innerHTML = markup;
+            console.log(markup);
+        </script>
+    </body>
+</html>
