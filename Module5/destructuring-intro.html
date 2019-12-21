@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Tagged templates!</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                first: 'julia',
+                last: 'johnson',
+                country: 'usa',
+                city: 'wl',
+                insta: '@juliacodes'
+            };
+
+            const { first, last } = person;
+
+            const julia = {
+                first: 'julia',
+                last: 'johnson',
+                links: {
+                    social: {
+                        twitter: 'idk',
+                        facebook: 'idk'
+                    }
+                },
+                country: 'usa',
+                city: 'wl'
+            };
+
+            const { twitter, facebook } = julia.links.social;
+
+            const { twitter: tweet, facebook: fb } = julia.links.social; // using new names when destructuring
+
+            const settings = {
+                width: 300,
+                color: 'black'
+            }; // need height and fontSize
+
+            const {
+                width = 100,
+                height = 100,
+                color = 'blue',
+                fontSize = 25
+            } = settings;
+            // able to set defaults if the variables don't exist in your object
+            // returns -> width 300, height 100, color black, fontSize 25
+
+            // object destructuring with variable renaming and default values
+            const { w: width = 400, h: height = 500 } = { w: 800 };
+            // widht and height are being created
+            // destructuring w and h from the object {w:800}
+            // width would equal 800
+            // height defaults back to 500
+        </script>
+    </body>
+</html>
