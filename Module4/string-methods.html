@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>string methods!</title>
+    </head>
+    <body>
+        <script>
+            const course = 'RFB2';
+            const flightNumber = '20-AC2018-JZ';
+            const accountNumber = '2034987837800001';
+
+            const make = 'BMW';
+            const model = 'x5';
+            const colour = 'Royal Blue';
+
+            // .startsWith()
+            course.startsWith('RFB'); // true
+            flightNumber.startsWith('AC'); // false
+            flightNumber.startsWith('AC', 3); // true
+            // .endsWith()
+            flightNumber.endsWith('JZ'); // true
+            accountNumber.endsWith('RT', 11); // true
+            // .includes()
+            flightNumber.includes('AC'); // true
+            flightNumber.includes('ac'); // false
+
+            // .repeat()
+            function leftPad(str, length = 20) {
+                return `📱${' '.repeat(length - str.length)}${str}`;
+            }
+
+            console.log(leftPad(make));
+            console.log(leftPad(model));
+            console.log(leftPad(colour));
+        </script>
+    </body>
+</html>
