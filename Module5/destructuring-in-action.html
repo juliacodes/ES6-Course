@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Arrow Functions Examples</title>
+    </head>
+    <body>
+        <script>
+            let inRing = 'Hulk Hogan';
+            let onSide = 'The Rock';
+
+            // old way - switching roles
+            var tmp = inRing;
+            inRing = onSide;
+            onside = tmp;
+
+            console.log(inRing, onSide); // Hulk Hogan The Rock
+
+            // new way - destructuring - much better
+            [inRing, onSide] = [onSide, inRing];
+
+            console.log(inRing, onSide); // The Rock Hulk Hogan
+        </script>
+    </body>
+</html>
